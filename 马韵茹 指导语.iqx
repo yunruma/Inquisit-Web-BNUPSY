@@ -1,0 +1,37 @@
+ // 好看的指导语--在block里调用图片
+ 
+ <picture endpic>
+     /erase = false
+     /halign = center
+     /size = (800,550)
+     /transparentcolor = white
+     /items = ("end.bmp")
+ </picture>
+ 
+ <picture instructionpic>
+     /erase = false
+     /halign = center
+     /size = (800,550)
+     /items = ("instruction.bmp")
+ </picture>
+ 
+ <trial instructiontrial>
+     /stimulusframes = [1 = instructionpic]
+     /validresponse = (" ")
+     
+ </trial>
+ 
+ <trial end>
+     /stimulusframes = [1 = endpic]
+     /validresponse = (" ")
+ </trial>
+ 
+ <block instruction>
+     /trials = [1 = instructiontrial, endtrial]
+ 
+ </block>
+ 
+ 
+ <expt instruction>
+ 	/blocks = [1 = instruction]
+ </expt>
