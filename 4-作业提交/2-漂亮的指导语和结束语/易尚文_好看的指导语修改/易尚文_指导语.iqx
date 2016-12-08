@@ -1,4 +1,17 @@
-﻿<text title>
+﻿<picture sign>
+	/erase = True(0,0,0) 
+	/position = (15%,15%)
+	/items = ("校徽.jpg")
+/size=(150,150)
+</picture>
+
+<picture sign2>
+	/erase = True(0,0,0) 
+	/position = (80%,15%)
+	/items = ("院徽.jpg")
+    /size=(200,200)
+</picture>
+<text title>
     / vjustify = top
 	/vposition= 45pct
 	/hjustify = center
@@ -22,7 +35,7 @@
 
 <text instructiontxt>
 	/hjustify = left
-	/items = ("   请将左手和右手的食指分别放在键盘的“F”键和“J”键上。
+	/items = ("   欢迎来到心理学院！请将左手和右手的食指分别放在键盘的“F”键和“J”键上。
    在屏幕的中央会随机出现有颜色的汉字，请判断汉字的颜色。")
 	/size = (800,150)
 	/fontstyle = ("楷体", 30pt)
@@ -77,7 +90,7 @@
 
 <trial instruction>
 	/validresponse = (anyresponse)
-	/stimulusframes = [1=title,instructiontxt,anykeytxt,yellow,blue]
+	/stimulusframes = [1=title,instructiontxt,anykeytxt,yellow,blue,sign,sign2]
 	/recorddata = false
 </trial>
 
@@ -88,7 +101,7 @@
 
 <trial end>
 	/validresponse = (" ")
-	/stimulusframes = [1=endtitle,endtxt,space]
+	/stimulusframes = [1=endtitle,endtxt,space,sign,sign2]
 	/recorddata = false
 </trial>
 
