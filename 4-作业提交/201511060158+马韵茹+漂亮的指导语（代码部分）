@@ -1,0 +1,35 @@
+<picture instruction>
+	/items = ("instruction.bmp")
+	/size = (1280,800)
+</picture>
+
+<picture ending>
+	/items = ("ending.bmp")
+	/size = (1280,800)
+</picture>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instruction]
+	/recorddata = false
+</trial>
+
+<trial ending>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=ending]
+	/recorddata = false
+</trial>
+
+<block instruction>
+	/screencolor = (0,0,0)
+	/trials = [1=instruction]
+</block>
+
+<block ending>
+	/screencolor = (0,0,0)
+	/trials = [1=ending]
+</block>
+
+<expt instruction>
+	/ blocks = [1=instruction;2=ending]
+</expt>
